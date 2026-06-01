@@ -1,0 +1,2 @@
+ALTER TABLE public_links
+    ADD COLUMN IF NOT EXISTS password_hash VARCHAR(100) NULL;

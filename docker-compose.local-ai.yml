@@ -1,0 +1,11 @@
+services:
+  backend:
+    depends_on:
+      - postgres
+    environment:
+      AI_WORKER_URL: http://host.docker.internal:8090
+      AI_WORKER_ENABLED: "true"
+
+  ai-worker:
+    profiles:
+      - container-ai
